@@ -1,0 +1,160 @@
+<!doctype html>
+
+
+<html lang="en">
+
+<head>
+    <title>Covid Web</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Landing Page</title>
+    <link rel="icon" href="./img/logo.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="./css1/kitchenblue.css">
+    <script>
+        (function() {
+            // injected DOM script is not a content script anymore,
+            // it can modify objects and functions of the page
+            var _pushState = history.pushState;
+            history.pushState = function(state, title, url) {
+                _pushState.call(this, state, title, url);
+                window.dispatchEvent(
+                    new CustomEvent('state-changed', {
+                        detail: url
+                    })
+                );
+            };
+            // repeat the above for replaceState too
+        })();
+    </script>
+    <script>
+        (function() {
+            // injected DOM script is not a content script anymore,
+            // it can modify objects and functions of the page
+            var _pushState = history.pushState;
+            history.pushState = function(state, title, url) {
+                _pushState.call(this, state, title, url);
+                window.dispatchEvent(
+                    new CustomEvent('state-changed', {
+                        detail: url
+                    })
+                );
+            };
+            // repeat the above for replaceState too
+        })();
+    </script>
+    <script>
+        (function() {
+            // injected DOM script is not a content script anymore,
+            // it can modify objects and functions of the page
+            var _pushState = history.pushState;
+            history.pushState = function(state, title, url) {
+                _pushState.call(this, state, title, url);
+                window.dispatchEvent(
+                    new CustomEvent('state-changed', {
+                        detail: url
+                    })
+                );
+            };
+            // repeat the above for replaceState too
+        })();
+    </script>
+</head>
+
+<body background="./img/Virus.png">
+    <!-- Header Section Start -->
+    <header class="stickymenu">
+        <div class="wrapper">
+            <div class="header__row">
+                <div class="logo__part">
+                    <a href="/">
+                        <div class="logo">
+                            <img src="./img/logo.png" alt=""><span>Covid-19</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="menu__part">
+                    <div class="mobile__nav">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="big__nav">
+                        <ul class="big__menus">
+                            <li class="big__menu__item btn secondary-btn">
+                                <a href="./index2.html">Covid Live Track</a>
+                            </li>
+                            <li class="big__menu__item">
+                                <a href="./index.html">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile__menu">
+        <ul class="mobile__menu__lists">
+            <li class="mobile__menu__item active">
+                <a href="./covid-Track/index2.html">Covid Live Track</a>
+            </li>
+            <li class="mobile__menu__item"><a href="./index.html">Home</a></li>
+        </ul>
+    </div>
+    <!-- Header End -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+    <center>
+        <h1>COVID-19 CORONAVIRUS PANDEMIC</h1>
+        <h2> SEARCH COUNTRY NAME</h2>
+    </center>
+    <center>
+        <div class="section-description">
+
+            <p class="section-subheading">
+                <form id="query-form">
+                    <div>
+                        <label for="ingredients">Country :</label><input class="textfield" id="ingredients" type="text" name="ingredients" placeholder="e.g.India,china" onChange="sanitizeInputs()" />
+                    </div>
+
+                    <div class="button">
+                        <br />
+                        <input class="button" type="button" value="Reset" id="resetButton" onClick="this.form.reset();resetResults()" />
+                        <input class="button" type="submit" value="Search ..." id="searchButton" />
+                    </div>
+                </form>
+            </p>
+
+            <div class="section-subheading" id="search-results-heading"></div>
+            <div class="results-div" id="results"></div>
+    </center>
+    <br>
+    <br>
+    <br>
+
+
+    <footer>
+
+
+        <br />
+        <p><code class="copyright-text">API LINK <a href="https://covid19api.com/" target= "_blank">Covid19API</a></code></p>
+
+        <code class="copyright-text">CREATED BY Nahusha & Team </code>
+
+    </footer>
+
+
+    <!-- JQuery Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Our codes -->
+    <script src="js1/kitchenblue.js?v=1"></script>
+</body>
+
+</html>

@@ -1,0 +1,327 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Landing Page</title>
+    <link rel="icon" href="./img/logo.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="./css/main.css">
+    <script>
+        (function() {
+            // injected DOM script is not a content script anymore,
+            // it can modify objects and functions of the page
+            var _pushState = history.pushState;
+            history.pushState = function(state, title, url) {
+                _pushState.call(this, state, title, url);
+                window.dispatchEvent(
+                    new CustomEvent('state-changed', {
+                        detail: url
+                    })
+                );
+            };
+            // repeat the above for replaceState too
+        })();
+    </script>
+    <script>
+        (function() {
+            // injected DOM script is not a content script anymore,
+            // it can modify objects and functions of the page
+            var _pushState = history.pushState;
+            history.pushState = function(state, title, url) {
+                _pushState.call(this, state, title, url);
+                window.dispatchEvent(
+                    new CustomEvent('state-changed', {
+                        detail: url
+                    })
+                );
+            };
+            // repeat the above for replaceState too
+        })();
+    </script>
+    <script>
+        (function() {
+            // injected DOM script is not a content script anymore,
+            // it can modify objects and functions of the page
+            var _pushState = history.pushState;
+            history.pushState = function(state, title, url) {
+                _pushState.call(this, state, title, url);
+                window.dispatchEvent(
+                    new CustomEvent('state-changed', {
+                        detail: url
+                    })
+                );
+            };
+            // repeat the above for replaceState too
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Header Section Start -->
+    <header class="stickymenu">
+        <div class="wrapper">
+            <div class="header__row">
+                <div class="logo__part">
+                    <a href="/">
+                        <div class="logo">
+                            <img src="./img/logo.png" alt=""><span>Covid-19</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="menu__part">
+                    <div class="mobile__nav">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="big__nav">
+                        <ul class="big__menus">
+                            <li class="big__menu__item btn secondary-btn">
+                                <a href="./index2.html">Covid Live Track</a>
+                            </li>
+                            <li class="big__menu__item">
+                                <a href="#overview">Overview</a>
+                            </li>
+                            <li class="big__menu__item">
+                                <a href="#contagion">Contagion</a>
+                            </li>
+                            <li class="big__menu__item">
+                                <a href="#symptoms">Symptoms</a>
+                            </li>
+                            <li class="big__menu__item active">
+                                <a href="#prevention">Prevention</a>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile__menu">
+        <ul class="mobile__menu__lists">
+            <li class="mobile__menu__item active">
+                <a href="#overview">Overview</a>
+            </li>
+            <li class="mobile__menu__item"><a href="./index2.html">Covid Live Track</a></li>
+            <li class="mobile__menu__item"><a href="#contagion">Contagion</a></li>
+            <li class="mobile__menu__item"><a href="#symptoms">Symptoms</a></li>
+            <li class="mobile__menu__item"><a href="#prevention">Prevention</a></li>
+
+        </ul>
+    </div>
+    <!-- Header End -->
+
+    <!-- Banner Start -->
+    <div class="section__box" id="overview">
+        <div class="wrapper">
+            <div class="banner__row">
+                <div class="illus__part">
+                    <img src="./img/banner.png" alt="">
+                </div>
+                <div class="info__part">
+                    <h3>Covid-19 Alert</h3>
+                    <h2>Protect yourself and others from COVID-19</h2>
+                    <p>
+                        COVID-19 is an infectious disease caused by the most recently discovered Coronavirus. This new virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019.
+                    </p>
+                </div>
+            </div>
+            <div class="banner__row">
+                <div class="illus__part">
+                    <img src="./img/banner2.png" alt="">
+                </div>
+                <div class="info__part">
+                    <h3>What is Covid-19 !</h3>
+                    <h2>Coronavirus</h2>
+                    <p>
+                        Coronaviruses are a family of viruses that typically cause mild respiratory infections like the common cold, but also more severe (and potentially deadly) infections. They are zoonotic diseases, meaning they are transmitted from animals to people.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="floater rt">
+            <img src="./img/right-corona.png" alt="">
+        </div>
+        <div class="big__v">
+            <img src="./img/Virus.png" alt="">
+        </div>
+    </div>
+    <!-- Banner End -->
+
+    <!-- Contagion Start -->
+    <div class="section__box" id="contagion">
+        <div class="wrapper">
+            <div class="title__bar">
+                <h3>Covid-19</h3>
+                <h2>Contagion</h2>
+                <p>
+                    Coronavirus disease spreads primarily through contact with an infected person when they cough or sneeze.
+                </p>
+            </div>
+            <div class="contag__row">
+                <div class="contag__card">
+                    <img src="./img/contag1.png" alt="">
+                    <div class="info">
+                        <h3>Air Transmission</h3>
+                        <p>
+                            Research shows that the virus can live in the air for up to 3 hours. It can get into your lungs if someone who has it breathes out and you breathe that air in.
+                        </p>
+                    </div>
+                </div>
+                <div class="contag__card">
+                    <img src="./img/contag2.png" alt="">
+                    <div class="info">
+                        <h3>Human Contacts</h3>
+                        <p>
+                            The disease can spread from person to person through small droplets from the nose or mouth.
+                        </p>
+                    </div>
+                </div>
+                <div class="contag__card">
+                    <img src="./img/contag3.png" alt="">
+                    <div class="info">
+                        <h3>Contained Objects</h3>
+                        <p>
+                            These droplets land on objects and surfaces around the person.Other people then catch COVID-19 by touching these objects or surfaces, then touching their eyes, nose or mouth.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="floater lf">
+            <img src="./img/right-corona.png" alt="">
+        </div>
+    </div>
+    <!-- Contagion End -->
+
+    <!-- Symptoms Start -->
+    <div class="section__box" id="symptoms">
+        <div class="wrapper">
+            <div class="title__bar">
+                <h3>Covid-19</h3>
+                <h2>Symptoms</h2>
+                <p>
+                    COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and recover without hospitalization.
+                </p>
+            </div>
+            <div class="symp__row">
+                <img src="./img/symptoms.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Symptoms End -->
+
+    <!-- Prevention Start -->
+    <div class="section__box" id="prevention">
+        <div class="wrapper">
+            <div class="title__bar">
+                <h3>Covid-19</h3>
+                <h2>What Should We Do</h2>
+            </div>
+            <div class="prev__box wrapper">
+                <div class="prev__item">
+                    <div class="img__part">
+                        <img src="./img/prev1.png" alt="">
+                    </div>
+                    <div class="desc__part">
+                        <div class="numer">
+                            <span>01</span>
+                        </div>
+                        <div class="paro">
+                            <h3>Wear Mask</h3>
+                            <p>
+                                Make wearing a mask a normal part of being around other people.Wear a mask over your nose and mouth to help prevent getting and spreading COVID-19. Wear a mask in public settings when around people who don’t live in your household, especially when indoors
+                                and when it may be difficult for you to stay six feet apart from people who don’t live with you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="prev__item">
+                    <div class="img__part">
+                        <img src="./img/prev2.png" alt="">
+                    </div>
+                    <div class="desc__part">
+                        <div class="numer">
+                            <span>02</span>
+                        </div>
+                        <div class="paro">
+                            <h3>Wash Hands</h3>
+                            <p>
+                                With COVID-19 transmission mainly spreading between people through direct, indirect (through contaminated objects or surfaces), or close contact with infected people via mouth and nose secretions, washing hands with soap and running water is of critical
+                                importance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="prev__item">
+                    <div class="img__part">
+                        <img src="./img/prev3.png" alt="">
+                    </div>
+                    <div class="desc__part">
+                        <div class="numer">
+                            <span>03</span>
+                        </div>
+                        <div class="paro">
+                            <h3>Don’t touch your eyes, nose or mouth.</h3>
+                            <p>
+                                Experts believe that the coronavirus is most commonly spread by droplets that are sneezed or coughed out and are then inhaled by someone else. Those droplets can land on surfaces, and when you touch that surface and then touch your mouth, nose or eyes,
+                                the virus can enter your body.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="prev__item">
+                    <div class="img__part">
+                        <img src="./img/prev4.png" alt="">
+                    </div>
+                    <div class="desc__part">
+                        <div class="numer">
+                            <span>04</span>
+                        </div>
+                        <div class="paro">
+                            <h3>Avoid Contact</h3>
+                            <p>Maintain at least six feet of distance between yourself and anyone who doesn’t live in your household. If someone in your home is sick, maintain six feet of distance from the sick person if possible.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Prevention End -->
+
+    <!-- Footer Start -->
+    <footer class="section__box">
+        <div class="wrapper">
+            <div class="foot__row">
+                <div class="foot__box">
+                    <div class="logo">
+                        <img src="./img/logo.png" alt=""><span>Covid-19</span>
+                    </div>
+                </div>
+                <div class="foot__box">
+                    <ul class="foot__menu">
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Symptoms</a></li>
+                        <li><a href="#">Prevention</a></li>
+                        <li><a href="#">Treatment</a></li>
+                    </ul>
+                </div>
+                <div class="foot__box">
+                    <p>
+                        © <span id="date">2021</span> Developed by Nahusha & Team
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="floater rt">
+            <img src="./img/right-corona.png" alt="">
+        </div>
+    </footer>
+    <!-- Footer ENd -->
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
